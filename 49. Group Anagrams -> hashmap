@@ -1,0 +1,12 @@
+from collections import defaultdict
+strs = ["eat","tea","tan","ate","nat","bat"]
+result = []
+anagram = defaultdict(list)
+
+for s in strs :
+    sortedS = tuple (sorted(s))
+    anagram[sortedS].append(s)
+
+for value in anagram.values() :
+    result.append(value)
+print(result)
